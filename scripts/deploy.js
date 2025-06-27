@@ -1,4 +1,6 @@
-import { ethers } from "hardhat";
+import pkg from 'hardhat';
+
+const { ethers } = pkg;
 
 // scripts.deploy.js
 async function main() {
