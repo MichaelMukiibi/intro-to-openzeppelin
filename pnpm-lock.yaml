@@ -24,6 +24,9 @@ importers:
       hardhat:
         specifier: ^2.25.0
         version: 2.25.0(ts-node@10.9.2(@types/node@24.0.4)(typescript@5.8.3))(typescript@5.8.3)
+      mnemonics:
+        specifier: ^1.1.3
+        version: 1.1.3
 
 packages:
 
@@ -580,6 +583,9 @@ packages:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
 
+  bip39@3.1.0:
+    resolution: {integrity: sha512-c9kiwdk45Do5GL0vJMe7tS95VjCii65mYAH7DfWl3uW8AVzXKQVUm64i3hzVybBDMp9r7j9iNxR85+ul8MdN/A==}
+
   blakejs@1.2.1:
     resolution: {integrity: sha512-QXUSXI3QVc/gJME0dBpXrag1kbzOqCjCX8/b54ntNyW6sjtoqxqRk3LTmXzaJoh71zMsDCjM+47jS7XiwN/+fQ==}
 
@@ -879,6 +885,10 @@ packages:
     resolution: {integrity: sha512-yhi5S+mNTOuRvyW4gWlg5W1byMaQGWWSYHXsuFZ7GBo7tpyOwi2EdzMP/QWxh9hwkD2m+wDVHJsxhRIj+v/b/A==}
     engines: {node: '>=0.12.0'}
     hasBin: true
+
+  esm@3.2.25:
+    resolution: {integrity: sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA==}
+    engines: {node: '>=6'}
 
   esprima@2.7.3:
     resolution: {integrity: sha512-OarPfz0lFCiW4/AV2Oy1Rp9qu0iusTKqykwTspGCZtPxmF81JR4MmIebvF1F9+UOKth2ZubLQ4XGGaU+hSn99A==}
@@ -1405,6 +1415,10 @@ packages:
   mkdirp@1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
+    hasBin: true
+
+  mnemonics@1.1.3:
+    resolution: {integrity: sha512-yD3XB99L3RGYGcIj8RvFA3Q579Rt8jDNsL548lPyoQfm3nyluy/Ycbn8mu+KtI85pnxrDmTtwRIanPS+rihWWg==}
     hasBin: true
 
   mnemonist@0.38.5:
@@ -2700,6 +2714,10 @@ snapshots:
 
   binary-extensions@2.3.0: {}
 
+  bip39@3.1.0:
+    dependencies:
+      '@noble/hashes': 1.8.0
+
   blakejs@1.2.1: {}
 
   bn.js@4.11.6: {}
@@ -2903,7 +2921,7 @@ snapshots:
     dependencies:
       cipher-base: 1.0.6
       inherits: 2.0.4
-      ripemd160: 2.0.1
+      ripemd160: 2.0.2
       sha.js: 2.4.11
 
   create-hash@1.2.0:
@@ -3032,6 +3050,8 @@ snapshots:
     optionalDependencies:
       source-map: 0.2.0
 
+  esm@3.2.25: {}
+
   esprima@2.7.3: {}
 
   esprima@4.0.1: {}
@@ -3042,7 +3062,7 @@ snapshots:
 
   ethereum-bloom-filters@1.2.0:
     dependencies:
-      '@noble/hashes': 1.7.2
+      '@noble/hashes': 1.8.0
 
   ethereum-cryptography@0.1.3:
     dependencies:
@@ -3651,6 +3671,11 @@ snapshots:
       minimist: 1.2.8
 
   mkdirp@1.0.4: {}
+
+  mnemonics@1.1.3:
+    dependencies:
+      bip39: 3.1.0
+      esm: 3.2.25
 
   mnemonist@0.38.5:
     dependencies:
