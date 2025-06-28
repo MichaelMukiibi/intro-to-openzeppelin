@@ -11,6 +11,13 @@ async function main() {
     // Retrieve the current value of the box
     const value = await box.retrieve();
     console.log('Box value is', value.toString());
+
+    // Send transaction
+    await box.store(23);
+
+    // Retrieve value
+    const new_value = await box.retrieve();
+    console.log('Box value is', value.toString());
 }
 
 main()
