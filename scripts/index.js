@@ -13,11 +13,11 @@ async function main() {
     console.log('Box value is', value.toString());
 
     // Send transaction
-    await box.store(23);
+    await box.store(56);
 
     // Retrieve value
     const new_value = await box.retrieve();
-    console.log('Box value is', value.toString());
+    console.log('Box value is', new_value.toString());
 }
 
 main()
